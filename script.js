@@ -83,11 +83,11 @@ function keyPress(e) {
   if (e.key >= 0 && e.key <= 9) {
     getNum(e.key);
   }
-  if (e.key == "+" || e.key == "-" || e.key == "/" || e.key == "*") {
-    if (e.key == "*") {
+  if (e.key === "+" || e.key === "-" || e.key === "/" || e.key === "*") {
+    if (e.key === "*") {
       getOperator("x");
     } else getOperator(e.key);
   }
-  if (e.key == "Enter") calculate();
-  if (e.key == "Escape") clear();
+  if (e.key === "Enter") calculate();
+  if (e.key === "Escape") clear();
 }
