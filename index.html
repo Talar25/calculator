@@ -16,28 +16,28 @@
   <body>
     <div class="calculator">
       <div class="screen">
-        <div class="sc-half screen-last"></div>
-        <div class="sc-half screen-current">0</div>
+        <div data-previous-operand class="sc-half screen-last"></div>
+        <div data-current-operand class="sc-half screen-current">0</div>
       </div>
       <div class="grid">
-        <button id="clear" class="btn btn-big red">Clear</button>
-        <button id="delete" class="btn btn-big red">Delete</button>
-        <button id="c7" class="btn">7</button>
-        <button id="c8" class="btn">8</button>
-        <button id="c9" class="btn">9</button>
-        <button id="c÷" class="btn btn-func">÷</button>
-        <button id="c4" class="btn">4</button>
-        <button id="c5" class="btn">5</button>
-        <button id="c6" class="btn">6</button>
-        <button id="cx" class="btn btn-func">x</button>
-        <button id="c1" class="btn">1</button>
-        <button id="c2" class="btn">2</button>
-        <button id="c3" class="btn">3</button>
-        <button id="c-" class="btn btn-func">-</button>
-        <button id="c." class="btn">.</button>
-        <button id="c0" class="btn">0</button>
-        <button id="c=" class="btn btn-func">=</button>
-        <button id="c+" class="btn btn-func">+</button>
+        <button data-clear class="btn btn-big red">Clear</button>
+        <button data-delete class="btn btn-big red">Delete</button>
+        <button data-number class="btn">7</button>
+        <button data-number class="btn">8</button>
+        <button data-number class="btn">9</button>
+        <button data-operation class="btn">÷</button>
+        <button data-number class="btn">4</button>
+        <button data-number class="btn">5</button>
+        <button data-number class="btn">6</button>
+        <button data-operation class="btn">x</button>
+        <button data-number class="btn">1</button>
+        <button data-number class="btn">2</button>
+        <button data-number class="btn">3</button>
+        <button data-operation class="btn">-</button>
+        <button data-number class="btn">.</button>
+        <button data-number class="btn">0</button>
+        <button data-equals class="btn">=</button>
+        <button data-operation class="btn">+</button>
       </div>
     </div>
     <script src="script.js"></script>
