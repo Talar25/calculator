@@ -28,6 +28,8 @@ clearButton.addEventListener("click", clear);
 
 deleteButton.addEventListener("click", deleteNumber);
 
+window.addEventListener("keydown", keyPress);
+
 function getNum(number) {
   if (current.length < 10) {
     current += number;
@@ -52,7 +54,7 @@ function calculate() {
 
     if (operator === "+") previous += current;
     else if (operator === "-") previous -= current;
-    else if (operator === "÷") previos /= current;
+    else if (operator === "/") previos /= current;
     else if (operator === "x") previous *= current;
     previous = Math.round(previous * 100) / 100;
     current = "";
@@ -60,7 +62,6 @@ function calculate() {
     previous = previous.toString();
     previousOperand.textContent = previous;
     currentOperand.textContent = previous;
-    calculator = true;
   }
 }
 
@@ -75,4 +76,18 @@ function clear() {
 function deleteNumber() {
   current = Number(currentOperand.textContent.toString().slice(0, -1));
   currentOperand.textContent = current;
+}
+
+function keyPress(e) {
+  e.preventDefault();
+  if (e.key >= 0 && e.key <= 9) {
+    getNum(e.key);
+  }
+  if (e.key == "+" || e.key == "-" || e.key == "/" || e.key == "*") {
+    if (e.key == "*") {
+      getOperator("x");
+    } else getOperator(e.key);
+  }
+  if (e.key == "Enter") calculate();
+  if (e.key == "Escape") clear();
 }
